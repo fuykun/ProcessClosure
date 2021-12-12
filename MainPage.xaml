@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="ProcessClosure.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProcessClosure"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <ListBox x:Name="processList" SelectionChanged="ListBox_SelectionChanged" Margin="10,0,1155,0" Loading="processList_Loading" Height="1080" VerticalAlignment="Center"/>
+        <ListBox x:Name="selectedProcessList" Margin="1168,0,10,0" Height="1080" Background="#FF947A63"/>
+        <Button x:Name="addToSelected" Content="&gt;" Margin="0,204,0,0" VerticalAlignment="Top" Height="88" Width="211" HorizontalAlignment="Center" FontSize="36" Click="addToSelected_Click" Background="#FF947A63"/>
+        <Button x:Name="removeToSelected" Content="&lt;" Margin="0,314,0,0" VerticalAlignment="Top" Height="88" Width="211" HorizontalAlignment="Center" FontSize="36"/>
+        <Button x:Name="removeToSelected_Copy" Content="Save" Height="88" Width="154" FontSize="36" Background="#333FF78E" Margin="807,452,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="removeToSelected_Copy1" Content="Clear" Height="88" Width="154" FontSize="36" Margin="966,452,0,0" VerticalAlignment="Top" Background="#33F4FD58"/>
+        <Button x:Name="removeToSelected_Copy2" Content="Kill All" Margin="0,589,0,0" Height="88" Width="211" FontSize="36" Click="removeToSelected_Copy2_Click" RequestedTheme="Default" Opacity="0.99" ToolTipService.ToolTip="tet" RenderTransformOrigin="0.537,0.228" VerticalAlignment="Top" HorizontalAlignment="Center" Background="#33FF0000"/>
+
+    </Grid>
+</Page>
