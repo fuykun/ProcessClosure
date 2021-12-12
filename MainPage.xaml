@@ -8,14 +8,15 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <ListBox x:Name="processList" SelectionChanged="ListBox_SelectionChanged" Margin="10,0,1155,0" Loading="processList_Loading" Height="1080" VerticalAlignment="Center"/>
-        <ListBox x:Name="selectedProcessList" Margin="1168,0,10,0" Height="1080" Background="#FF947A63"/>
-        <Button x:Name="addToSelected" Content="&gt;" Margin="0,204,0,0" VerticalAlignment="Top" Height="88" Width="211" HorizontalAlignment="Center" FontSize="36" Click="addToSelected_Click" Background="#FF947A63"/>
-        <Button x:Name="removeToSelected" Content="&lt;" Margin="0,314,0,0" VerticalAlignment="Top" Height="88" Width="211" HorizontalAlignment="Center" FontSize="36"/>
-        <Button x:Name="removeToSelected_Copy" Content="Save" Height="88" Width="154" FontSize="36" Background="#333FF78E" Margin="807,452,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="removeToSelected_Copy1" Content="Clear" Height="88" Width="154" FontSize="36" Margin="966,452,0,0" VerticalAlignment="Top" Background="#33F4FD58"/>
-        <Button x:Name="removeToSelected_Copy2" Content="Kill All" Margin="0,589,0,0" Height="88" Width="211" FontSize="36" Click="removeToSelected_Copy2_Click" RequestedTheme="Default" Opacity="0.99" ToolTipService.ToolTip="tet" RenderTransformOrigin="0.537,0.228" VerticalAlignment="Top" HorizontalAlignment="Center" Background="#33FF0000"/>
+    <Grid RequestedTheme="Dark">
+        <ListBox x:Name="processList" SelectionChanged="ListBox_SelectionChanged" Margin="10,175,1140,174" Loading="processList_Loading" Height="731" VerticalAlignment="Center" RequestedTheme="Default"/>
+        <ListBox x:Name="selectedProcessList" Margin="1140,175,10,174" Background="#FF947A63" RequestedTheme="Dark"/>
+        <Button x:Name="addToSelected" Content="&gt;" Margin="0,306,0,0" VerticalAlignment="Top" Height="88" Width="86" HorizontalAlignment="Center" FontSize="36" Click="addToSelected_Click" Background="#FF947A63" RequestedTheme="Dark"/>
+        <Button x:Name="removeToSelected" Content="&lt;" Margin="0,416,0,0" VerticalAlignment="Top" Height="88" Width="86" HorizontalAlignment="Center" FontSize="36" RequestedTheme="Dark" Click="removeToSelected_Click"/>
+        <Button x:Name="removeToSelected_Copy" Content="Save" Height="67" Width="154" FontSize="36" Background="#333FF78E" Margin="0,660,0,0" VerticalAlignment="Top" RequestedTheme="Dark" HorizontalAlignment="Center"/>
+        <Button x:Name="btnClear" Content="Clear" Height="66" Width="154" FontSize="36" Margin="0,752,0,0" VerticalAlignment="Top" Background="#33F4FD58" RequestedTheme="Dark" HorizontalAlignment="Center" Click="btnClear_Click"/>
+        <Button x:Name="btnKillAll" Content="Kill All" Height="88" Width="211" FontSize="36" RequestedTheme="Dark" Opacity="0.99" ToolTipService.ToolTip="tet" RenderTransformOrigin="0.537,0.228" HorizontalAlignment="Center" Background="#33FF0000" Click="btnKillAll_Click" Margin="0,541,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnRefresh" Content="Refresh" Margin="0,197,0,0" VerticalAlignment="Top" Height="66" Width="212" HorizontalAlignment="Center" FontSize="36" RequestedTheme="Dark" Click="btnRefresh_Click"/>
 
     </Grid>
 </Page>

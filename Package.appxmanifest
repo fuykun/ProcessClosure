@@ -8,7 +8,8 @@
   xmlns:iot="http://schemas.microsoft.com/appx/manifest/iot/windows10"
   xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4"
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
-  IgnorableNamespaces="uap mp uap3 iot uap4 rescap">
+  xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
+  IgnorableNamespaces="uap mp uap3 iot uap4 rescap desktop">
 
 	<Identity
 	  Name="522e1c47-a189-4f3d-8aa0-6a79401a7f54"
@@ -42,13 +43,17 @@
 			  Description="ProcessClosure"
 			  BackgroundColor="transparent">
 				<uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
-				<uap:SplashScreen Image="Assets\SplashScreen.png" />
 			</uap:VisualElements>
 		</Application>
+		
 	</Applications>
 
 	<Capabilities>
 		<Capability Name="internetClient" />
-		<rescap:Capability Name="appDiagnostics"/>
+			<rescap:Capability Name="runFullTrust"/>
+			<rescap:Capability Name="appDiagnostics"/>
+		<uap4:Capability Name="userDataTasks"/>
+		<uap:Capability Name="userAccountInformation"/>
+		<iot:Capability Name="systemManagement"/>
 	</Capabilities>
 </Package>
